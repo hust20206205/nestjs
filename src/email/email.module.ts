@@ -9,12 +9,13 @@ import { ConfigModule } from '@nestjs/config';
     ConfigModule.forRoot(),
     MailerModule.forRoot({
       transport: {
-        host: process.env.EMAIL_HOST, // Địa chỉ SMTP server
-        port: parseInt(process.env.EMAIL_PORT), // Port của SMTP server
-        secure: parseInt(process.env.EMAIL_PORT) === 465, // Sử dụng SSL/TLS (true cho 465, false cho các cổng khác)
+        // host: process.env.EMAIL_HOST,
+        // port: parseInt(process.env.EMAIL_PORT),
+        // secure: parseInt(process.env.EMAIL_PORT) === 465,
+        service: process.env.EMAIL_SERVICE_NAME,
         auth: {
-          user: process.env.EMAIL_USER, // Địa chỉ email
-          pass: process.env.EMAIL_PASS, // Mật khẩu email
+          user: process.env.EMAIL_USER,
+          pass: process.env.EMAIL_PASS,
         },
       },
       defaults: {

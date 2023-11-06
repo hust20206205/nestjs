@@ -11,6 +11,6 @@ export class EmailService {
       subject: currentDateTime, // Đặt tiêu đề thành thời gian hiện tại
       text: 'This is a test email', // Nội dung email
     });
-    return { currentDateTime };
+    return  { message:   "Email đã được gửi" };
   }
 }
