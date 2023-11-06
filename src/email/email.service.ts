@@ -7,10 +7,11 @@ export class EmailService {
   async testSendEmail() {
     const currentDateTime = new Date().toLocaleString();
     await this.mailerService.sendMail({
-      to: 'nghia.vv206205@sis.hust.edu.vn',
-      subject: currentDateTime, // Đặt tiêu đề thành thời gian hiện tại
-      text: 'This is a test email', // Nội dung email
+      to: process.env.EMAIL_USER,
+      // to: process.env.EMAIL_USER,
+      subject: currentDateTime,
+      text: 'This is a test email',
     });
-    return  { message:   "Email đã được gửi" };
+    return { message: 'Email đã được gửi' };
   }
 }
