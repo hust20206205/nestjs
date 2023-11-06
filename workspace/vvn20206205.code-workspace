@@ -1,0 +1,184 @@
+{
+  "folders": [
+    {
+      "path": ".."
+    },
+    {
+      "path": "../content"
+    }
+  ],
+  "extensions": {
+    "recommendations": [
+      "formulahendry.code-runner",
+      "dracula-theme.theme-dracula",
+      "aaron-bond.better-comments",
+      "pkief.material-icon-theme",
+      "codeium.codeium",
+      "almenon.arepl",
+      "ms-python.python",
+      "ms-python.vscode-pylance",
+      "ms-python.autopep8",
+      "fedricknishant.turbo-python-print",
+      "chakrounanas.turbo-console-log",
+      "mikestead.dotenv",
+      "archsense.architecture-view-nestjs",
+      "ms-vscode.cpptools-extension-pack",
+      "streetsidesoftware.code-spell-checker",
+      "christian-kohler.path-intellisense",
+      "foxundermoon.shell-format",
+      "esbenp.prettier-vscode",
+      "james-yu.latex-workshop",
+      "cweijan.vscode-mysql-client2",
+      "hediet.vscode-drawio",
+      "redhat.vscode-yaml",
+      "editorconfig.editorconfig",
+      "ms-vscode-remote.remote-wsl",
+      "ms-azuretools.vscode-docker",
+      "ms-kubernetes-tools.vscode-kubernetes-tools",
+      "ms-vscode-remote.remote-containers",
+      "steoates.autoimport",
+      "kamikillerto.vscode-colorize"
+    ]
+  },
+  "settings": {
+    "code-runner.executorMap": {
+      "python": " clear && cd $dir && python $fileName",
+      // "python": " clear && cd $dir && python3 $fileName",
+      "javascript": " clear && cd $dir && node $fileName",
+      // "typescript": " clear && cd $dir && npm run start",
+      "typescript": " clear && cd $dir && npm run start:dev",
+      // "typescript": " clear && cd $dir && start Chrome http://localhost:3000 && npm run start:dev",
+      // "typescript": " clear && cd $dir && start Chrome http://localhost:3000/apidocs && npm run start:dev",
+      "yaml": " clear && cd $dir && if [ $fileName = skaffold.yaml ]; then ( skaffold dev ); else ( kubectl apply -f $fileName); fi;",
+      "markdown": " clear && cd $dir && if [ $fileName = README.md ]; then ( cd ../workspace/others/push && python push.py ); else ( echo NO ); fi;",
+      "bat": " clear && cd $dir && cmd $fileName",
+      "shellscript": " clear && cd $dir && bash $fileName",
+      "cpp": " clear && cd $dir && g++ -std=c++11 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+    },
+    // Tự động lưu file
+    "files.autoSave": "afterDelay",
+    // Cho phép phóng to thu nhỏ
+    "editor.mouseWheelZoom": true,
+    // Hiển thị các thư mục
+    "explorer.compactFolders": false,
+    // Sao chép nội dung terminal
+    "terminal.integrated.copyOnSelection": true,
+    // Bật xóa file vào thùng rác
+    "files.enableTrash": true,
+    // Không hiển thị xác nhận xóa
+    "explorer.confirmDelete": false,
+    // Phóng to hoặc thu nhỏ giao diện
+    "window.zoomLevel": 1,
+    // Tắt hộp thoại xác nhận kéo và thả tệp hoặc thư mục
+    "explorer.confirmDragAndDrop": false,
+    // Sử dụng mặc định cho terminal trên Windows
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    // Sử dụng mặc định cho terminal trên Linux
+    "terminal.integrated.defaultProfile.linux": "bash",
+    //
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "git.openRepositoryInParentFolders": "always",
+    // !extensions
+    // Chạy mã trong terminal
+    "code-runner.runInTerminal": true,
+    // Đường dẫn là "/"
+    "code-runner.terminalRoot": "/",
+    // Đổi chủ đề màu sắc sang Dracula
+    "workbench.colorTheme": "Dracula",
+    // Chọn chủ đề biểu tượng là "material-icon-theme"
+    "workbench.iconTheme": "material-icon-theme",
+    // Chọn gói biểu đồ hiện tại là "nest"
+    "material-icon-theme.activeIconPack": "nest",
+    "workbench.editorAssociations": {
+      "*.pdf": "latex-workshop-pdf-hook"
+    },
+    "material-icon-theme.folders.color": "#ff79b4",
+    "material-icon-theme.files.associations": {
+      "*.validator.ts": "nest-decorator",
+      "README.md": "3d",
+      "*.md": "3d"
+    },
+    "[python]": {
+      "editor.defaultFormatter": "ms-python.autopep8"
+    },
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[markdown]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    // comment
+    //! comment
+    //@ comment
+    //$ comment
+    "better-comments.tags": [
+      {
+        "tag": "",
+        "color": "#FF0000",
+        "strikethrough": false,
+        "underline": false,
+        "backgroundColor": "transparent",
+        "bold": false,
+        "italic": false
+      },
+      {
+        "tag": "!",
+        "color": "#FFA500",
+        "strikethrough": false,
+        "underline": false,
+        "backgroundColor": "transparent",
+        "bold": false,
+        "italic": false
+      },
+      {
+        "tag": "@",
+        "color": "#00CED1",
+        "strikethrough": false,
+        "underline": false,
+        "backgroundColor": "transparent",
+        "bold": false,
+        "italic": false
+      },
+      {
+        "tag": "$",
+        "color": "#FF00FF",
+        "strikethrough": false,
+        "underline": false,
+        "backgroundColor": "transparent",
+        "bold": false,
+        "italic": false
+      }
+    ],
+    "latex-workshop.latex.tools": [
+      {
+        "name": "latexmk",
+        "command": "latexmk",
+        "args": [
+          "-synctex=1",
+          "-shell-escape",
+          "-interaction=nonstopmode",
+          "-file-line-error",
+          "-pdf",
+          "-outdir=%OUTDIR%",
+          "%DOC%"
+        ],
+        "env": {}
+      }
+    ]
+  }
+}
