@@ -4,7 +4,7 @@ import { MailerService } from '@nestjs-modules/mailer';
 @Injectable()
 export class EmailService {
   constructor(private readonly mailerService: MailerService) {}
-  async sendEmail() {
+  async testSendEmail() {
     const currentDateTime = new Date().toLocaleString();
     await this.mailerService.sendMail({
       to: 'nghia.vv206205@sis.hust.edu.vn',
